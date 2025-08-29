@@ -1,0 +1,185 @@
+/*Initialization*/
+* {
+  box-sizing: border-box; /*Doesnt affect the width and height of the element when adding padding or margin*/
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #4891ff;
+  --light-color: #f4f4f6;
+  --dark-color: #111;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%; /*Default, a image can be put in a div without breaking out of the div*/
+}
+
+/* NavBar Settings */
+
+.navBar {
+  background: #fff;
+  padding: 20px;
+}
+
+.navBar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} /*.navbar .container access the child from the navbar so i am sure that this appends only for this container*/
+
+.navBar .main-menu ul {
+  display: flex;
+}
+
+.navBar ul li a {
+  padding: 10px 20px;
+  display: block; /*links are displayed inline by default so it should be chnaged to block or whatever you need*/
+  font-weight: 600;
+  transition: 0.5s; /*Using for a smotth transition when hovering*/
+}
+
+.navBar ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navBar ul li:last-child a {
+  margin-left: 10px; /* Adding space between log in and blog, use the last child because login is the last LI from the list*/
+}
+
+.navBar ul li a i {
+  margin-right: 3px;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 50px;
+}
+
+.hero .container {
+  background: url("../images/hero-bg.png") no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  height: 550px;
+}
+
+.hero .hero-content {
+  width: 70%;
+}
+
+.hero .hero-text {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.hero .btn i {
+  margin-right: 6px;
+}
+
+/*Utility classes*/
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /*the container si positioned in the middle, top bottom 0 and left right AUTO */
+  padding: 0 15px; /*15px not to be positioned at the margin*/
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto; /*the container si positioned in the middle, top bottom 0 and left right AUTO */
+  padding: 0 15px; /*15px not to be positioned at the margin*/
+}
+
+/*Buttons */
+
+.btn {
+  display: inline-block;
+  /*Ideal for navigation menus, button groups, or image thumbnails that need to align side-by-side with specific dimensions
+    display:inline-block ; */
+
+  padding: 13px 20px;
+  background: var(--light-color);
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Text Classes */
+
+.text-xxl {
+  font-size: 3rem; /*1 rem = default used size so,  1,2,3,4rem.. x default = rem x size in px*/
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 40px 0 20px;
+}
+
+.text-xl {
+  font-size: 2.2rem; /*1 rem = default used size so,  1,2,3,4rem.. x default = rem x size in px*/
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 40px 0 20px;
+}
+
+.text-lg {
+  font-size: 1.8rem; /*1 rem = default used size so,  1,2,3,4rem.. x default = rem x size in px*/
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 30px 0 20px;
+}
+
+.text-md {
+  font-size: 1.2rem; /*1 rem = default used size so,  1,2,3,4rem.. x default = rem x size in px*/
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 20px 0 10px;
+}
+
+.text-sm {
+  font-size: 0.9rem; /*1 rem = default used size so,  1,2,3,4rem.. x default = rem x size in px*/
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 10px 0 5px;
+}
+
+.text-center {
+  text-align: center;
+}
