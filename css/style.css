@@ -1,6 +1,6 @@
 /*Initialization*/
 * {
-  box-sizing: border-box; /*Doesnt affect the width and height of the element when adding padding or margin*/
+  box-sizing: border-box; /*Doesn't affect the width and height of the element when adding padding or margin*/
   margin: 0;
   padding: 0;
 }
@@ -50,9 +50,9 @@ img {
 
 .navBar ul li a {
   padding: 10px 20px;
-  display: block; /*links are displayed inline by default so it should be chnaged to block or whatever you need*/
+  display: block; /*links are displayed inline by default so it should be changed to block or whatever you need*/
   font-weight: 600;
-  transition: 0.5s; /*Using for a smotth transition when hovering*/
+  transition: 0.5s; /*Using for a smooth transition when hovering*/
 }
 
 .navBar ul li a:hover {
@@ -90,6 +90,50 @@ img {
 
 .hero .btn i {
   margin-right: 6px;
+}
+
+/* Video Section */
+.video {
+  padding: 10px 0 40px;
+}
+
+.video-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-preview {
+  margin-bottom: 20px;
+}
+
+/* Testimonials */
+
+.testimonials {
+  padding: 40px 0;
+}
+
+.testimonials .testimonials-heading {
+  width: 700px;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; /*Using a fraction to extend all the way*/
+}
+
+.testimonials .card p:nth-child(2) {
+  /*Using nth-child ti select a respective child*/
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.testimonials .card p:last-child {
+  /*Using nth-child ti select a respective child*/
+  font-style: italic;
+  font-size: small;
 }
 
 /*Utility classes*/
@@ -182,4 +226,35 @@ img {
 
 .text-center {
   text-align: center;
+}
+
+/* Background */
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+/* Card */
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
 }
