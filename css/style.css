@@ -162,7 +162,7 @@ img {
 
 .pricing .card {
   border-radius: 20px;
-  padding: 0px 70px 60px;
+  padding: 0px 40px 60px;
 }
 
 .pricing .pricing-grid {
@@ -178,7 +178,7 @@ img {
 }
 
 .pricing .pricing-card-subheading {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .pricing .pricing-card-price {
@@ -232,7 +232,7 @@ img {
   position: absolute;
   right: 0;
   top: 35px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -386,6 +386,21 @@ img {
   margin: 40px 0 20px;
 }
 
+.faq h3.text-xl {
+  font-size: 2.2rem; /*1 rem = default used size so,  1,2,3,4rem.. x default = rem x size in px*/
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 0 0 20px;
+}
+
+.text-xl-bold {
+  font-size: 2.2rem; /*1 rem = default used size so,  1,2,3,4rem.. x default = rem x size in px*/
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 40px 0 20px;
+  font-weight: 600;
+}
+
 .text-lg {
   font-size: 1.8rem; /*1 rem = default used size so,  1,2,3,4rem.. x default = rem x size in px*/
   line-height: 1.4;
@@ -441,6 +456,7 @@ img {
   cursor: pointer;
   padding: 10px;
   z-index: 1000;
+  margin-right: -10px;
 }
 
 .hamburger-button .hamburger-line {
@@ -534,7 +550,30 @@ img {
     max-width: 100%;
     text-align: center;
   }
+
+  .testimonials .testimonials-grid,
+  .pricing .pricing-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .footer .card {
+    margin-right: 0;
+  }
+
+  .footer .footer-grid > div {
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+
+  .footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 500px) {
+  .text-xxl {
+    font-size: 2rem;
+  }
 }
