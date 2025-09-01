@@ -19,6 +19,7 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 a {
@@ -39,7 +40,7 @@ img {
 .navBar {
   background: #fff;
   padding: 8px 20px;
-  opacity: 0.97;
+  opacity: 0.99;
   position: fixed;
   width: 100%;
 }
@@ -266,6 +267,48 @@ img {
   background: var(--primary-color);
   color: #fff;
 }
+
+.footer {
+  padding: 40px 0;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer ul li {
+  line-height: 2.5;
+}
+
+.footer a {
+  color: #ccc;
+}
+
+.footer i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.footer .footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .card {
+  margin: 20px 30px 30px 0;
+}
+
+.footer input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
 /*Utility classes*/
 
 .container {
@@ -388,4 +431,110 @@ img {
 .bg-black {
   background: #000;
   color: #fff;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  margin: 7px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  right: 0px;
+}
+
+.mobile-menu ul {
+  margin-top: 100px;
+  padding-right: 10px;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+/* Media Queries */
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .navBar .main-menu {
+    display: none;
+  }
+
+  .navBar .hamburger-button {
+    display: block;
+  }
+
+  .hero .container {
+    background: url("../images/hero-bg-mobile.png") no-repeat;
+    background-size: 350px 400px;
+    background-position: bottom;
+    height: 770px;
+  }
+
+  .hero .hero-content,
+  .hero .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .hero-buttons .btn {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  /* Text */
+
+  .text-xl {
+    font-size: 1.9rem;
+  }
+
+  .text-lg {
+    font-size: 1.5rem;
+  }
+
+  .text-md {
+    font-size: 1.1rem;
+  }
+
+  .testimonials .testimonials-heading {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
 }
