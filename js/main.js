@@ -1,6 +1,8 @@
 // FAQ Accordion
 document.addEventListener("DOMContentLoaded", () => {
   const faqContainer = document.querySelector(".faq-content");
+  const faqul = document.querySelector(".faq-menu");
+  const faqItems = document.querySelectorAll(".faq-menu li");
 
   faqContainer.addEventListener("click", (e) => {
     const groupHeader = e.target.closest(".faq-group-header");
@@ -32,6 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  faqItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      faqItems.forEach((i) => i.classList.remove("active"));
+      item.classList.add("active");
+    });
+  });
 });
 
 //Mobile Menu
@@ -43,4 +52,53 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburgerButton.addEventListener("click", () =>
     mobileMenu.classList.toggle("active")
   );
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonialsGrid = document.querySelector(".testimonials-grid");
+
+  if (testimonialsGrid) {
+    //Colen the cards so we can show te clones when the original ones end
+    const cards = Array.from(testimonialsGrid.children);
+    cards.forEach((card) => {
+      const clone = card.cloneNode(true);
+      testimonialsGrid.append(clone);
+    });
+
+    let translateX = 0;
+    const scrollStep = 0.5; // Slower movement
+    const cardWidth = 430;
+    const totalCards = cards.length; //orogonals card length
+    const resetPoint = totalCards * cardWidth;
+
+    function autoScroll() {
+      translateX += scrollStep;
+
+      if (translateX >= resetPoint) {
+        translateX = 0;
+      }
+
+      testimonialsGrid.style.transform = `translateX(-${translateX}px)`;
+    }
+    setInterval(autoScroll, 16); // Smooth 60fps
+  }
+});
+
+//Hide navbar while scrolling down
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navBar");
+
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 0) {
+      navbar.style.transform = "translateY(-100%)";
+    } else {
+      navbar.style.transform = "translateY(0)";
+    }
+
+    lastScrollY = currentScrollY;
+  });
 });
