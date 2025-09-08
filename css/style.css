@@ -260,11 +260,16 @@ img {
 }
 
 .faq .faq-group .faq-group-body {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: 0.7s ease-in-out;
 }
 
 .faq .faq-group .faq-group-body.open {
-  display: block;
+  max-height: 300px;
+  opacity: 1;
 }
 
 .faq ul.faq-menu {
