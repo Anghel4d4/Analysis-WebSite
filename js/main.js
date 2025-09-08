@@ -1,8 +1,9 @@
 // FAQ Accordion
 document.addEventListener("DOMContentLoaded", () => {
   const faqContainer = document.querySelector(".faq-content");
-  const faqul = document.querySelector(".faq-menu");
+  const faqUl = document.querySelector(".faq-menu");
   const faqItems = document.querySelectorAll(".faq-menu li");
+  const faqGroup = document.querySelectorAll(".faq-group");
 
   faqContainer.addEventListener("click", (e) => {
     const groupHeader = e.target.closest(".faq-group-header");
@@ -35,10 +36,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  //FAQ menu filter
   faqItems.forEach((item) => {
     item.addEventListener("click", () => {
+      //update the active state
       faqItems.forEach((i) => i.classList.remove("active"));
       item.classList.add("active");
+
+      //convert button text to category name for filtering when pressing a button
+      const category = item.textContent.toLowerCase().replace(" ", "-");
+
+      //filter the groups
+      faqGroup.forEach((group) => {
+        const groupCategories = group.dataset.category;
+
+        if (category === "all" || groupCategories.includes(category)) {
+          group.style.display = "block";
+        } else {
+          group.style.display = "none";
+        }
+      });
     });
   });
 });

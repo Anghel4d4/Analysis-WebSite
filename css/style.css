@@ -146,8 +146,6 @@ img {
   flex-shrink: 0;
 }
 
-.testimonials .container {
-}
 .testimonials .card p:first-child {
   font-size: 20px;
 }
@@ -245,6 +243,7 @@ img {
   padding: 20px 0;
   margin-bottom: 15px;
   position: relative;
+  transition: 0.3s ease;
 }
 
 .faq .faq-group .faq-group-header h4 {
@@ -285,6 +284,7 @@ img {
   padding: 10px 20px;
   border-radius: 5px;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .faq ul.faq-menu li.active {
