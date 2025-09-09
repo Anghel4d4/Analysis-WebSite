@@ -1,6 +1,7 @@
 # Training Website Overview 
 
 This repository contains a simple training website built from scratch to practice the basics of web design and responsive development. The project focuses on learning fundamental HTML, CSS, and JavaScript concepts, with an emphasis on creating a responsive layout that adapts to different screen sizes.
+Go to analysis-web-site.vercel.app for the preview
 
 ## Features 
 
