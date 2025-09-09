@@ -45,14 +45,14 @@ Analysis-WebSite/
 └── README.md      # This file
 ```
 
-## Learning Objectives 📚
+## Learning Objectives 
 
 - Understand semantic HTML and its importance
 - Learn CSS layout techniques (Flexbox, Grid, media queries)
 - Practice responsive design principles for mobile and desktop
 - Implement basic JavaScript for user interaction
 
-## Contributing 🤝
+## Contributing 
 
 This is a learning project, but contributions are welcome! If you have suggestions or improvements:
 
