@@ -1,8 +1,8 @@
-# Training Website Overview 🚀
+# Training Website Overview 
 
 This repository contains a simple training website built from scratch to practice the basics of web design and responsive development. The project focuses on learning fundamental HTML, CSS, and JavaScript concepts, with an emphasis on creating a responsive layout that adapts to different screen sizes.
 
-## Features ✨
+## Features 
 
 - **HTML Structure:** Clean and semantic HTML5 markup
 - **CSS Styling:** Utilizes CSS for styling, including Flexbox and Grid for layout design
@@ -10,7 +10,7 @@ This repository contains a simple training website built from scratch to practic
 - **JavaScript Basics:** Simple interactivity to demonstrate core JavaScript functionality
 - **Cross-Browser Compatibility:** Tested on modern browsers (Chrome, Firefox, Safari)
 
-## Installation 🛠️
+## Installation 
 
 1. Clone the repository:
 ```bash
@@ -24,18 +24,19 @@ cd Analysis-WebSite
 
 3. Open `index.html` in a web browser to view the website locally.
 
-## Usage 📖
+## Usage 
 
 - Explore the `index.html` file to understand the HTML structure
 - Check `styles.css` for styling and responsive design techniques
 - Review `main.js` for basic JavaScript functionality
 - Experiment by modifying the code to practice and enhance your web development skills
 
-## Project Structure 📁
+## Project Structure 
 
 ```
 Analysis-WebSite/
 ├── index.html     # Main HTML file
+├── login.html
 ├── css/
 │   └── styles.css # CSS for styling and responsive design
 ├── js/
