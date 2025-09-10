@@ -66,9 +66,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburgerButton = document.querySelector(".hamburger-button");
   const mobileMenu = document.querySelector(".mobile-menu");
 
-  hamburgerButton.addEventListener("click", () =>
-    mobileMenu.classList.toggle("active")
-  );
+  hamburgerButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+
+    if (mobileMenu.classList.contains("active")) {
+      body.classList.add("no-scroll");
+    } else {
+      body.classList.remove("no-scroll");
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!hamburgerButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.remove("active");
+      body.classList.remove("no-scroll");
+    }
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
