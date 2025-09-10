@@ -65,10 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerButton = document.querySelector(".hamburger-button");
   const mobileMenu = document.querySelector(".mobile-menu");
+  const body = document.body;
 
   hamburgerButton.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
 
+    // Prevent/allow body scrolling when menu is toggled
     if (mobileMenu.classList.contains("active")) {
       body.classList.add("no-scroll");
     } else {
@@ -76,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Close menu when clicking outside and restore scrolling
   document.addEventListener("click", (e) => {
     if (!hamburgerButton.contains(e.target) && !mobileMenu.contains(e.target)) {
       mobileMenu.classList.remove("active");
