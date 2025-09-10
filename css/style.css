@@ -25,8 +25,6 @@ body {
 
 body.no-scroll {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 
 a {
@@ -48,7 +46,6 @@ img {
 .navBar {
   background: #fff;
   padding: 8px 20px;
-  opacity: 0.99;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -79,6 +76,10 @@ img {
   color: var(--primary-color);
 }
 
+.navBar #spacing.mobile-menu li:last-child a {
+  margin-left: 0;
+  /* Adding space between log in and blog, use the last child because login is the last LI from the list*/
+}
 .navBar ul li:last-child a {
   margin-left: 10px;
   /* Adding space between log in and blog, use the last child because login is the last LI from the list*/
@@ -301,6 +302,7 @@ img {
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* prevent blue flash on the bar */
 }
 
 .faq ul.faq-menu li {
@@ -587,7 +589,7 @@ img {
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 1001; /* Higher than navbar */
+  z-index: 1101; /* Higher than navbar */
 
   margin-right: -10px;
 }
@@ -604,10 +606,12 @@ img {
   position: fixed;
   top: 0;
   right: -300px;
-  width: 250px;
+  width: 200px;
   height: 100%;
-  z-index: 1002;
+  z-index: 1100;
   background: #fff;
+  height: 100vh;
+
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease-in-out;
 }
@@ -693,6 +697,19 @@ img {
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
+  }
+
+  .faq ul.faq-menu {
+    max-width: 100%;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  .faq ul.faq-menu li {
+    flex: 1 1 0; /* make all three equal width */
+    white-space: nowrap; /* avoid two-line “Getting Started” */
+    padding: 10px 12px;
+    font-size: 0.95rem; /* slightly smaller so it fits on one line */
   }
 
   .footer .card {
